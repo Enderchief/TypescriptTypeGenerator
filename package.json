@@ -1,0 +1,15 @@
+{
+  "name": "typescript-type-gen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "endercheif <reet22singh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "@snowpack/plugin-typescript": "^1.2.1",
+    "snowpack": "^3.2.2"
+  }
+}
