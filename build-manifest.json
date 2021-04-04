@@ -1,0 +1,1 @@
+{"inputs":{"build/prism.css":{"bytes":3257,"imports":[]},"build/dist/style.css":{"bytes":1175,"imports":[]}},"outputs":{"/prism.css":{"imports":[],"entryPoint":"build/prism.css","inputs":{"build/prism.css":{"bytesInOutput":2401}},"bytes":2402},"/dist/style.css":{"imports":[],"entryPoint":"build/dist/style.css","inputs":{"build/dist/style.css":{"bytesInOutput":848}},"bytes":943}}}

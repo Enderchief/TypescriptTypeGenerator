@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Typescript Type Generator">
+    <meta property="og:description" content="Converts JSON to beautiful Typescript interfaces">
+    <title>Typescript Type Generator</title>
+    <script data-manual src="prism.js"></script>
+    <script defer src="dist/script.js"></script>
+    <link rel="stylesheet" href="prism.css">
+    <link rel="stylesheet" href="dist/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">JSON to Typescript Interface</h2>
+
+      <p>
+        Paste your JSON data in the textarea and recieve a beautiful Typescript
+        interface.
+      </p>
+      <span id="error" class="error"></span>
+      <div id="content" class="content">
+        <textarea class="child" name="json" id="json" cols="50" rows="20" spellcheck="false" placeholder="Paste JSON Data here"></textarea>
+        <div class="child">
+          <pre style="white-space: pre-wrap"><code class="snippet language-ts line-numbers" id="typescript"></code></pre>
+        </div>
+      </div>
+
+      <div class="options">
+        <label for="indent-size">Indent Size</label>
+        <input type="number" name="indent-size" id="indent" min="0" max="10" value="2">
+        <label for="interface-name">Interface Name</label>
+        <input type="text" name="interface-name" id="name" value="data">
+        <label for="newline">Newlines</label>
+        <input type="checkbox" name="newline" id="newline" checked="true">
+      </div>
+    </div>
+
+    <footer>
+      <p class="footer-child">© RS 2021</p>
+      <a class="footer-child" href="https://github.com/endercheif">Github</a>
+    </footer>
+  
+
+</body></html>
