@@ -43,10 +43,12 @@ function parse(text) {
     jsonArea.classList.add("valid");
     Prism.highlightElement(typescriptArea);
   } catch (error) {
-    const prettyError = {
-      line: / line [\d]+ /.exec(error)[0].replace("line", "").trim(),
-      column: / column [\d]+ /.exec(error)[0].replace("column", "").trim()
-    };
+    const prettyError = {line: "", column: ""};
+    try {
+      prettyError.line = / line [\d]+ /.exec(error)[0].replace("line", "").trim();
+      prettyError.column = / column [\d]+ /.exec(error)[0].replace("column", "").trim();
+    } catch {
+    }
     errorText.innerText = error + "\n";
     const tempArr = jsonArea.value.split("\n");
     const val = tempArr[+prettyError.line];
@@ -73,6 +75,8 @@ function getTypes(obj, level) {
     inter += (CONST.USE_NEWLINE ? "\n" : "") + CONST.INDENT.repeat(level) + key + ": ";
     if (Array.isArray(obj[key])) {
       inter += arrTypes(obj[key], level + 1) + ";";
+    } else if (obj[key] === null) {
+      inter += "null;";
     } else if (type == "object") {
       inter += getTypes(obj[key], level + 1) + ";";
     } else
