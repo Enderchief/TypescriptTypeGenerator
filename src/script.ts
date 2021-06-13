@@ -131,6 +131,7 @@ function arrTypes(arr: Array<any>, level: number) {
     let curr;
 
     if (Array.isArray(arr[i])) curr = arrTypes(arr[i], level + 1);
+    else if (arr[i] === null) curr = "null";
     else if (type === "object") curr = getTypes(arr[i], level + 1);
     else curr = type;
 
